@@ -1,12 +1,16 @@
-import { Injectable } from '@angular/core';
+import {HttpClient} from '@angular/common/http';
+import {inject, Injectable } from '@angular/core';
 
 @Injectable({
   providedIn: 'root'
 })
 export class GitProfileService {
 
-  constructor() { }
-  getGitProfile() {
-    
+  http: HttpClient = inject(HttpClient)
+
+  baseApiUrl: string = 'http://api.github.com/users'
+  
+  getGitProfile(){
+    return this.http.get(`${this.baseApiUrl}/google/followers`) //  !!! Change google to <user_name>
   }
 }
