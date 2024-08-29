@@ -5,7 +5,9 @@
   "projects": {
     "git-handler-app": {
       "projectType": "application",
-      "schematics": {},
+      "schematics": {
+        "skipTests": true
+      },
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -97,5 +99,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "783baa05-6d2c-49c9-8cc5-111400269375"
   }
 }
