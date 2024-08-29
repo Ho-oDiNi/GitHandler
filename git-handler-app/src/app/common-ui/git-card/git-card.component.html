@@ -1,11 +1,16 @@
-<div class="git-card">
+@if (profile){
+    <div class="git-card">
 
-    <div class="git-card_avatar">
-        <img scr="" alt="avatar" class="git-card__avatar-img">
-    </div>
+        <div class="git-card_avatar">
+            <img [attr.src]="profile.avatar_url" class="git-card__avatar-img">
+        </div>
 
-    <div class="git-card_name">
-        <strong class="git-card__title"> Title </strong>
-        <a class="git-card__link" href=""> Link </a>
+        <div class="git-card_name">
+            <strong class="git-card__title"> {{profile.login}} </strong>
+            <a class="git-card__link" href=""> {{profile.url}} </a>
+        </div>
     </div>
-</div>
+}
+@else{
+    Error Not Found
+}

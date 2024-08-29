@@ -1,4 +1,8 @@
-<app-git-card></app-git-card>
-<pre>
-  {{profiles[0].login}}
-</pre>
+<div class="git-card__wrapper">
+  @for (profile of profiles; track profile.id) {
+    <app-git-card
+    [profile]  = "profile"
+    ></app-git-card>
+  }
+</div>
+
