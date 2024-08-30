@@ -19,10 +19,16 @@ export class AppComponent {
   profiles: GitProfile[] = []
 
 
-  constructor(){
-    this.gitProfileService.getGitProfile("google")
+  getGitCards = (user_name: string) => {
+    this.gitProfileService.getGitProfile(user_name)
     .subscribe(val => {
       this.profiles = val
     })
   }
+  // constructor(){
+  //   this.gitProfileService.getGitProfile("google")
+  //   .subscribe(val => {
+  //     this.profiles = val
+  //   })
+  // }
 }

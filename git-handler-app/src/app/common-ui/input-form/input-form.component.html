@@ -1,4 +1,4 @@
 <div class="input-form">
-    <input class="input-control" type="text" placeholder="google">
-    <button type="submit">Submit</button>
+    <input type="text" class="input-form__input"  [(ngModel)] = "input_text" >
+    <button (click)="search()" class="input-form__button" type="submit">Search</button>
 </div>
