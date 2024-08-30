@@ -3,14 +3,11 @@
 
         <div class="git-card_avatar">
             <img [attr.src]="profile.avatar_url" class="git-card__avatar-img">
+            <div class = "git-card_name">
+                <strong class="git-card__title"> {{profile.login}} </strong>
+                <a class="git-card__link" href=""> {{profile.url}} </a>
+            </div>
         </div>
 
-        <div class="git-card_name">
-            <strong class="git-card__title"> {{profile.login}} </strong>
-            <a class="git-card__link" href=""> {{profile.url}} </a>
-        </div>
     </div>
-}
-@else{
-    Error Not Found
 }

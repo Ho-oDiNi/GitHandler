@@ -28,10 +28,5 @@ export class AppComponent {
       this.profiles = val
     })
   }
-  // constructor(){
-  //   this.gitProfileService.getGitProfile("google")
-  //   .subscribe(val => {
-  //     this.profiles = val
-  //   })
-  // }
+
 }
