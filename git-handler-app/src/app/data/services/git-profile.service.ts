@@ -8,10 +8,8 @@ import {GitProfile} from '../interfaces/git-profile.interface';
 export class GitProfileService {
 
   http: HttpClient = inject(HttpClient)
-
-  baseApiUrl: string = 'http://api.github.com/users'
   
-  getGitProfile(){
-    return this.http.get<GitProfile[]>(`${this.baseApiUrl}/google/followers`) //  !!! Change google to <user_name>
+  getGitProfile(user_name: string){
+    return this.http.get<GitProfile[]>(`http://api.github.com/users/${user_name}/followers`) //  !!! Change google to <user_name>
   }
 }
