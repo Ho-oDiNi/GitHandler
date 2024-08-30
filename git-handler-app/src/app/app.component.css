@@ -18,3 +18,21 @@
     line-height: 24px;
     cursor:pointer;
 }
+
+.null-string{
+    margin: 40px auto 40px auto;
+    text-align: center;
+    color: var(--white-color);
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+}
+
+.main_title{
+    margin: 40px auto 40px auto;
+    text-align: center;
+    color: var(--white-color);
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 24px;
+}

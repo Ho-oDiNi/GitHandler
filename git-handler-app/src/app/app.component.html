@@ -1,4 +1,6 @@
-
+<div class = "main_title">
+  GitHub Followers Handler
+</div>
 
 <div class="input-form">
   <input type="text" class="input-form__input"  [(ngModel)] = "user_name" >
@@ -11,6 +13,10 @@
     <app-git-card
     [profile]  = "profile"
     ></app-git-card>
+  }
+  @if(showHint)
+  {
+    <p class="null-string"> {{Hint}}  </p>
   }
 </div>
 

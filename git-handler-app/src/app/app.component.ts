@@ -16,17 +16,35 @@ import { FormsModule } from '@angular/forms';
 export class AppComponent {
 
   user_name: string = "";
+  showHint: boolean = true;
+  Hint: string = "Please enter the GitHub username";
 
   gitProfileService = inject(GitProfileService)
   profiles: GitProfile[] = []
 
-
   getGitCards = () => {
-    console.log(this.user_name);
+    if (this.user_name == "") {
+      this.profiles = []; 
+      this.showHint = true;
+      this.Hint = "Please enter the GitHub username";
+      return;
+    }
+    
     this.gitProfileService.getGitProfile(this.user_name)
     .subscribe(val => {
       this.profiles = val
     })
+    this.showHint = false;
+    this.user_name == ""
+
+    setTimeout(() => {
+      if (this.profiles.length == 0) 
+        {
+          this.showHint = true;
+          this.Hint = "Username Not Found";
+        }
+    }, 500);
   }
+    
 
 }

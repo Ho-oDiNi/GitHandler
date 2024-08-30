@@ -10,5 +10,5 @@ import { GitProfile } from '../../data/interfaces/git-profile.interface';
   styleUrl: './git-card.component.css'
 })
 export class GitCardComponent {
-  @Input() profile!: GitProfile;
+  @Input() profile?: GitProfile;
 }

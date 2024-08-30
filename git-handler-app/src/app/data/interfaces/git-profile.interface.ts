@@ -1,6 +1,7 @@
 export interface GitProfile {
     login: string,
     id: number,
+    status: number,
     node_id: string,
     avatar_url: string,
     gravatar_id: string,

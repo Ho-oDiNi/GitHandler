@@ -10,6 +10,6 @@ export class GitProfileService {
   http: HttpClient = inject(HttpClient)
   
   getGitProfile(user_name: string){
-    return this.http.get<GitProfile[]>(`http://api.github.com/users/${user_name}/followers`) //  !!! Change google to <user_name>
+    return this.http.get<GitProfile[]>(`http://api.github.com/users/${user_name}/followers`)
   }
 }
