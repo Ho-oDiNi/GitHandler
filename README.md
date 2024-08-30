@@ -17,7 +17,5 @@ API: http://api.github.com/users/<user_name>/followers
 ![image](https://github.com/user-attachments/assets/6d945712-3f6b-4520-9437-e1e25726edd9)
 
 # Выполнено
-Интерфейс:
-![image](https://github.com/user-attachments/assets/3df34f85-02d1-4f90-bfda-036106b7e47a)
-Функционал:
+Интерфейс и функционал:
 ![image](https://github.com/user-attachments/assets/ca3f3091-4bad-4b7c-9a85-c7ffcd3fd42f)
