@@ -15,14 +15,14 @@ import { FormsModule } from '@angular/forms';
 })
 export class AppComponent {
 
-  user_name: string = "";
-  showHint: boolean = true;
-  Hint: string = "Please enter the GitHub username";
+  public user_name: string = "";
+  public showHint: boolean = true;
+  public Hint: string = "Please enter the GitHub username";
 
-  gitProfileService = inject(GitProfileService)
-  profiles: GitProfile[] = []
+  private gitProfileService = inject(GitProfileService);
+  public profiles: GitProfile[] = [];
 
-  getGitCards = () => {
+  public getGitCards = () => {
     if (this.user_name == "") {
       this.profiles = []; 
       this.showHint = true;
@@ -32,10 +32,10 @@ export class AppComponent {
     
     this.gitProfileService.getGitProfile(this.user_name)
     .subscribe(val => {
-      this.profiles = val
+      this.profiles = val;
     })
     this.showHint = false;
-    this.user_name == ""
+    this.user_name == "";
 
     setTimeout(() => {
       if (this.profiles.length == 0) 

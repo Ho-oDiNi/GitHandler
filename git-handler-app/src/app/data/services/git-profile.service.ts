@@ -7,9 +7,9 @@ import {GitProfile} from '../interfaces/git-profile.interface';
 })
 export class GitProfileService {
 
-  http: HttpClient = inject(HttpClient)
+  private http: HttpClient = inject(HttpClient);
   
-  getGitProfile(user_name: string){
-    return this.http.get<GitProfile[]>(`http://api.github.com/users/${user_name}/followers`)
+  public getGitProfile(user_name: string){
+    return this.http.get<GitProfile[]>(`http://api.github.com/users/${user_name}/followers`);
   }
 }
