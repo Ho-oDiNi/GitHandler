@@ -5,7 +5,7 @@
             <img [attr.src]="profile.avatar_url" class="git-card__avatar-img">
             <div class = "git-card_name">
                 <strong class="git-card__title"> {{profile.login}} </strong>
-                <a class="git-card__link" href=""> {{profile.url}} </a>
+                <a class="git-card__link" href="{{profile.html_url}}"> {{profile.html_url}} </a>
             </div>
         </div>
 
