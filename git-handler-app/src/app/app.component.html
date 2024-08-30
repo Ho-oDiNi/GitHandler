@@ -1,5 +1,6 @@
-<div class="git-input">
-  <app-input-form></app-input-form>
+<div class="input-form">
+  <input type="text" class="input-form__input"  [(ngModel)] = "user_name" >
+  <button (click)="getGitCards()" class="input-form__button" type="submit">Search</button>
 </div>
 
 
